@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Broos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div onclick="esconderformulario()" class="mascara-formulario"></div>
+    <div onclick="esconderservicos()" class="mascara-servicos"></div>
+
+    <div class="container">
+        <video src="img/video.mp4" autoplay muted loop src="video"></video>
+    </div>
+
+    <header class="cabeçalho">
+        <img class="img-cabeçalho" src="img/logo-header.png">
+        <a href="https://github.com/Radamesjrr" target="_blank" class="botoes-cabeçalho cab1">Fale conosco</a>
+        <a onclick="mostrarserviços()" class="botoes-cabeçalho">Nossos serviços</a>
+    </header>
+
+    <div class="div-principal">
+
+        <div class="div-detalhes">
+            <img class="img-logo" src="img/logo.png" rel="img-logo">
+
+            <p>🔧<b>Encanadores Mario e Luigi - Resolvendo todos os seus problemas com estilo!</b>🔧</p>
+            <p>Você já se ecnontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos
+                entupidos
+                ou
+                torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos
+                a
+                vocês
+                os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
+            <button onclick="mostrarformulario()" class="botao-contato">Entrar em contato</button>
+        </div>
+
+        <div class="img-right">
+            <img class="img-marioeluigi" src="img/mario.png">
+        </div>
+
+        <a href="https://github.com/Radamesjrr" target="_blank"><img class="img-wpp" src="img/whatsapp.png"
+                rel="img-whatsapp"></a>
+
+        <form class="form-orçamento" action="https://formcarry.com/s/AQBn6ukRDHA" method="POST"
+            enctype="multipart/form-data">
+
+            <label>Digite seu nome:</label>
+            <input placeholder="Ex.: Felipe Azevedo" type="text" name="nome">
+
+            <label>Digite seu telefone:</label>
+            <input placeholder="Ex.: 81925252525" type="tel" name="telefone">
+
+            <label>Digite seu problema:</label>
+            <textarea placeholder="Ex.: Estou com problema de vazamento na pia da cozinha" name="dúvida"></textarea>
+
+            <button class="botao-orçamento" type="submit">Pedir orçamento</button>
+        </form>
+
+        <div class="div-servicos">
+
+            <p class="servicos sev">• Manutenção</p>
+            <p class="servicos">- Reparos elétricos;
+                <br>
+                - Reparos hidráulicos;
+                <br>
+                - Pintura de paredes
+                <br>
+                - Instalação de ventiladores de teto, chuveiros, luminárias;
+            </p>
+
+            <p class="servicos sev">• Limpeza</p>
+            <p class="servicos">- Limpeza residencial
+                <br>
+                - Limpeza pós-obra
+                <br>
+                - Limpeza de escritórios e empresas
+                <br>
+                - Limpeza de vidros e fachadas
+                <br>
+                - Limpeza de terrenos e lotes
+            </p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
