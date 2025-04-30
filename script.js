@@ -10,7 +10,7 @@ function mostrarformulario() {
 
 function esconderformulario() {
     mascara.style.visibility="hidden"
-    formulario.style.left ="-230px"
+    formulario.style.left ="-290px"
 }
 
 function mostrarserviços() {

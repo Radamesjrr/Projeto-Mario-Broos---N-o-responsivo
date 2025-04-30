@@ -1,11 +1,14 @@
 * {
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-body {overflow: hidden;}
+body {
+    overflow: hidden;
+
+}
 
 .container {
     position: fixed;
@@ -16,76 +19,72 @@ body {overflow: hidden;}
 
 video {
     position: fixed;
-    width: auto;
-    height: auto;
-    min-width: 100%;
-    max-width: 100%;
-    filter: brightness(0.1);
     top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.1);
 }
 
 .cabeçalho {
     display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
     position: relative;
-    top: 10px;
+    z-index: 2;
 }
 
 .img-cabeçalho {
     width: 60px;
-    position: relative;
-    left: 30px;
 }
 
 .botoes-cabeçalho {
-    margin: 19px 20px 0 10px;
     font-size: 20px;
-    position: relative;
-    cursor: pointer;
     color: white;
-    text-decoration: none
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .botoes-cabeçalho:hover {
     color: #E00B00;
-    transition: 0.6s;
-    font-size: 23px;
-}
-
-.botoes-cabeçalho:active {
-    opacity: 0.7;
-    transition: none;
+    font-size: 22px;
 }
 
 .cab1 {
-    margin-left: 70px;
-}
-
-.img-logo {
-    width: 350px;
-    position: relative;
-    bottom: 10px;
+    margin-left: 30px;
 }
 
 .div-principal {
-    height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     color: white;
-    justify-content: space-evenly;
+    padding: 50px 20px;
+    gap: 30px;
+    min-height: 100vh;
 }
 
 .div-detalhes {
-    position: relative;
-    top: 3%;
-    left: 10px;
-    width: 660px;
+    max-width: 600px;
     text-align: justify;
-    font-size: 17px;
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 28px;
+    position: relative;
+    left: -90px;
+}
+
+.img-logo {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
 }
 
 .botao-contato {
-    font-size: 20px;
+    font-size: 18px;
     background: #E00B00;
     color: white;
     padding: 10px 25px;
@@ -93,24 +92,25 @@ video {
     border-radius: 5px;
     margin-top: 25px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .botao-contato:hover {
     opacity: 0.8;
-    transition: 0.6s;
-    font-size: 23px;
-
+    font-size: 20px;
 }
 
-.botao-contato:active {
-    opacity: 0.6;
-}
-
-.img-marioeluigi {
-    width: 350px;
+.img-right img {
+    width: 100%;
+    max-width: 350px;
     position: relative;
-    left: 40%;
-    top: 20%;
+    left: 100px;
+}
+
+.img-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-wpp {
@@ -121,186 +121,149 @@ video {
     z-index: 3;
 }
 
-.form-orçamento {
-    padding: 20px;
-    background-color: white;
-    position: fixed;
-    top: 30%;
-    left: -230px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 5px;
-    z-index: 3;
-    transition: left 1s ease-in-out;
-}
+    .form-orçamento {
+        position: fixed;
+        top: 30%;
+        left: -290px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        transition: left 1s ease-in-out;
+        width: 300px
+    }
+    
 
-input {
-    width: 200px;
-    height: 30px;
-    padding-left: 5px;
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
 }
 
 textarea {
     height: 100px;
-    padding-left: 5px;
-
-}
-
-
-.botao-orçamento {
-    font-size: 15px;
-    background: #E00B00;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    width: 150px;
-}
-
-.botao-orçamento:hover {
-    opacity: 0.6;
 }
 
 label {
     color: black;
 }
 
-.mascara-formulario {
+.botao-orçamento {
+    background: #E00B00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao-orçamento:hover {
+    opacity: 0.7;
+}
+
+.mascara-formulario,
+.mascara-servicos {
     visibility: hidden;
-    z-index: 3;
     position: fixed;
     width: 100vw;
     height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
     background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-    transition: visibility 1s ease-in-out;
+    transition: visibility 0.5s ease-in-out;
 }
-
 
 .div-servicos {
     position: fixed;
     background: white;
     color: black;
     width: 300px;
-    height: auto;
     right: -290px;
     top: 30%;
     border-radius: 10px;
-    padding: 20px 25px;
+    padding: 20px;
     z-index: 3;
     transition: right 1s ease-in-out;
 }
 
-
-
-
 .servicos {
-    margin: 5px 0 10px 0;
+    margin: 5px 0;
 }
 
 .sev {
     color: red;
 }
 
-.mascara-servicos {
-    visibility: hidden;
-    z-index: 3;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-    transition: visibility 1s ease-in-out;
-}
-
-@media (max-width: 1000px) {
-    p {
-        display: none
-    }
-
-
-    video {
-        position: fixed;
-        width: 100vw;
-        min-width: 200%;
-        filter: brightness(0.1);
-        top: 0;
-    }
-
+@media (max-width: 768px) {
     .cabeçalho {
-        width: 70%;
-        height: 50px;
-        margin-left: 3px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
     }
 
     .img-cabeçalho {
-        width: 40px;
-        height: 40px;
-        left: 20px;
+        display: none; /* Remove a imagem do Mario no header */
     }
 
-    .botoes-cabeçalho {
-        font-size: 15px;
-        margin: 15px 10px 0 0px
-    }
-
-    .botoes-cabeçalho:hover {
-        font-size: 15px;
-        color: #E00B00;
-    }
-
-    .cab1 {
-        margin-left: 50px;
-        margin-right: 25px;
-    }
-
-    .img-logo {
-        width: 250px;
-        position: relative;
-        bottom: 315px;
-        left: 45px;
-    }
-
-    .botao-contato {
-        font-size: 15px;
-        background: #E00B00;
-        color: white;
-        padding: 10px 25px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        position: fixed;
-        left: 98px;
-        top: 200px;
-    }
-
-    .form-orçamento {
-        padding: 20px;
-        background-color: white;
-        position: fixed;
-        top: 10%;
-        left: -230px;
-        display: flex;
+    .div-principal {
         flex-direction: column;
-        gap: 10px;
-        border-radius: 5px;
-        z-index: 3;
-        transition: left 1s ease-in-out;
+        padding: 20px 10px;
+        gap: 20px;
     }
 
-    .img-marioeluigi {
-        width: 200px;
-        position: relative;
-        left: 0px;
-        top: 0;
+    .div-detalhes {
+        max-width: 100%;
+        left: 0;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0 10px;
+    }
+
+    .img-logo,
+    .img-right img {
+        max-width: 250px;
+        left: 0;
     }
 
     .img-right {
-        position: fixed;
-        left: 85px;
-        top: 300px;
+        justify-content: center;
     }
 
     .img-wpp {
-        display: none;
+        display: none; /* Remove o botão flutuante do WhatsApp */
+    }
+
+    .form-orçamento,
+    .div-servicos {
+        position: fixed;
+        width: 90%;
+        left: 5%;
+        top: 20%;
+        right: auto;
+        border-radius: 10px;
+    }
+
+    .form-orçamento {
+        left: 5%;
+    }
+
+    .div-servicos {
+        right: 5%;
+    }
+
+    .botao-contato,
+    .botao-orçamento {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
     }
 }
